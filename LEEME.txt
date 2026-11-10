@@ -1,0 +1,19 @@
+SONIQ PERÚ S.A.C. — Sitio web
+
+ARCHIVOS
+- index.html: sitio web completo y adaptable a móviles y computadoras.
+- assets/mascota-soniq.png: mascota panda extraída de la portada del PDF.
+- assets/modelo-basico.png, modelo-estandar.png y modelo-premium.png: imágenes de productos extraídas de la página 4 del PDF.
+
+CÓMO ABRIR
+1. Descomprime el ZIP completo.
+2. Mantén la carpeta assets junto a index.html.
+3. Abre index.html con Chrome, Edge o Firefox.
+
+ANTES DE PUBLICAR
+- Cambia contacto@soniqperu.com por el correo oficial (en el script al final de index.html).
+- Añade el número real de WhatsApp y los enlaces reales de redes sociales.
+- Confirma características, compatibilidad, garantía y disponibilidad de cada producto.
+- El documento de origen señala que algunos datos de constitución/RUC son hipotéticos; no se publicaron datos registrales ni financieros.
+
+No se muestran precios, montos, presupuestos, costos ni proyecciones financieras.

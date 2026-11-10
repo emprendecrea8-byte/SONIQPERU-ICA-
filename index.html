@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SONIQ Perú S.A.C. — Conecta con tu música. Descubre auriculares inalámbricos para tu día a día.">
+<title>SONIQ Perú | Conecta con tu música</title>
+<style>
+:root{--bg:#080b14;--panel:#101727;--panel2:#141f33;--blue:#397bff;--cyan:#35d7ed;--white:#f4f7ff;--muted:#a8b3c8;--line:rgba(255,255,255,.1);--radius:22px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}
+.wrap{width:min(1160px,92%);margin:auto}.topbar{position:sticky;top:0;z-index:20;background:rgba(8,11,20,.86);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:1.6px}.logo{width:39px;height:39px;border-radius:13px;background:linear-gradient(135deg,var(--blue),var(--cyan));display:grid;place-items:center;color:#07101d;font-weight:1000;font-size:19px;box-shadow:0 7px 28px #397bff55}.brand small{display:block;font-size:9px;letter-spacing:3px;color:var(--muted);font-weight:700;margin-top:-4px}
+.links{display:flex;align-items:center;gap:26px;color:#c4cee0;font-size:13px;font-weight:650}.links a:hover{color:var(--cyan)}.nav-cta,.btn{border:0;border-radius:999px;padding:12px 19px;background:linear-gradient(110deg,var(--blue),#5b9cff);color:white;font-weight:800;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 10px 30px #397bff35;transition:.25s}.nav-cta:hover,.btn:hover{transform:translateY(-3px);box-shadow:0 14px 36px #397bff55}.menu{display:none;background:none;border:1px solid var(--line);color:white;border-radius:12px;padding:9px 12px}
+.hero{position:relative;overflow:hidden;padding:96px 0 84px;background:radial-gradient(ellipse at 78% 30%,#17418b55,transparent 38%),radial-gradient(ellipse at 5% 80%,#087d9950,transparent 35%)}.hero:after{content:"";position:absolute;width:500px;height:500px;border:1px solid #55baff22;border-radius:50%;right:-100px;top:-170px;box-shadow:0 0 0 50px #55baff08,0 0 0 100px #55baff05;pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:50px;position:relative;z-index:1}.eyebrow{color:var(--cyan);font-size:11px;font-weight:900;letter-spacing:3px;text-transform:uppercase}.hero h1{font-size:clamp(44px,6vw,76px);line-height:1.02;letter-spacing:-3px;margin:18px 0}.hero h1 span{background:linear-gradient(100deg,#fff 15%,#72dfff 75%);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:540px;color:var(--muted);font-size:17px;margin:0 0 28px}.hero-actions{display:flex;gap:13px;flex-wrap:wrap}.btn-outline{border:1px solid #8bb9ff66;border-radius:999px;padding:11px 19px;color:#dce9ff;font-weight:750}.btn-outline:hover{background:#ffffff10}
+.hero-art{min-height:390px;display:grid;place-items:center;position:relative}.orbit{width:355px;height:355px;border:1px solid #6ccfff44;border-radius:50%;display:grid;place-items:center;position:relative;box-shadow:0 0 70px #1678ff20,inset 0 0 50px #1678ff12;background:radial-gradient(circle,#1b4b7c55,transparent 68%)}.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid #6ccfff22;border-radius:50%;inset:24px}.orbit:after{inset:-25px;border-style:dashed;animation:spin 32s linear infinite}.hero-mascot{width:92%;height:92%;object-fit:contain;position:relative;z-index:1;filter:drop-shadow(0 20px 25px #0009);animation:floatMascot 5s ease-in-out infinite}@keyframes floatMascot{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.earbuds{display:flex;gap:22px;align-items:center;transform:rotate(-13deg);filter:drop-shadow(0 25px 18px #0009)}.bud{width:67px;height:126px;background:linear-gradient(130deg,#f9fcff,#8999b5 52%,#e9f3ff);border-radius:42px 42px 30px 30px;position:relative}.bud:before{content:"";position:absolute;width:44px;height:45px;background:linear-gradient(130deg,#faffff,#8295b3);border-radius:50%;top:-15px;left:11px}.bud:after{content:"";position:absolute;width:12px;height:38px;background:#dce8f8;border-radius:10px;bottom:-27px;left:27px}.bud:nth-child(2){transform:translateY(20px) rotate(13deg)}.floating{position:absolute;padding:10px 14px;border:1px solid #7ccfff40;background:#0b1728dd;backdrop-filter:blur(10px);border-radius:14px;color:#d8f5ff;font-size:12px;font-weight:800}.float1{top:22px;right:0}.float2{bottom:20px;left:0}
+section{padding:86px 0}.section-head{text-align:center;max-width:660px;margin:0 auto 42px}.section-head h2{font-size:clamp(30px,4vw,44px);letter-spacing:-1.5px;line-height:1.1;margin:12px 0}.section-head p{color:var(--muted);margin:0}.catalog{background:linear-gradient(180deg,#0b1020,#0a0e18)}.products{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.product{background:linear-gradient(155deg,#17243a,#0e1625 70%);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.3s;display:flex;flex-direction:column}.product:hover{transform:translateY(-7px);border-color:#48b9ed88;box-shadow:0 18px 45px #0005}.product-visual{height:245px;display:grid;place-items:center;background:radial-gradient(circle at 50% 55%,#285e9c77,transparent 65%),linear-gradient(135deg,#14233c,#0c1423);position:relative}.product-photo{padding:10px}.product-photo img{width:100%;height:100%;object-fit:contain;border-radius:12px}.product-visual .buds{display:flex;gap:13px;transform:rotate(-18deg);filter:drop-shadow(0 15px 10px #0008)}.mini-bud{width:42px;height:78px;border-radius:28px 28px 22px 22px;background:linear-gradient(120deg,#fff,#8da2c2 55%,#e9f1ff);position:relative}.mini-bud:before{content:"";position:absolute;width:29px;height:30px;top:-10px;left:7px;border-radius:50%;background:linear-gradient(120deg,#fff,#8da2c2)}.mini-bud:after{content:"";position:absolute;width:8px;height:24px;bottom:-18px;left:17px;border-radius:8px;background:#d8e6f9}.case{width:95px;height:52px;border-radius:22px 22px 30px 30px;background:linear-gradient(140deg,#f6fbff,#788ba9);position:absolute;bottom:24px;box-shadow:0 12px 15px #0005}.case:before{content:"";position:absolute;top:9px;left:0;right:0;border-top:2px solid #60748f66}.tag{position:absolute;top:16px;left:17px;font-size:10px;letter-spacing:1.5px;color:#9deaff;font-weight:900}.product-body{padding:23px;display:flex;flex-direction:column;flex:1}.product-body h3{margin:0 0 7px;font-size:21px}.product-body p{margin:0;color:var(--muted);font-size:14px}.features{display:flex;gap:8px;flex-wrap:wrap;margin:17px 0 21px}.chip{font-size:11px;padding:6px 9px;border-radius:30px;background:#ffffff0c;border:1px solid var(--line);color:#c8d8ef}.product-body button{margin-top:auto;align-self:flex-start;background:none;border:0;padding:0;color:var(--cyan);font-weight:850;cursor:pointer}.product-body button:hover{color:white}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.about-card{border:1px solid var(--line);background:linear-gradient(145deg,#15223a,#0c1422);border-radius:26px;padding:30px;position:relative;overflow:hidden}.about-card:before{content:"S";position:absolute;right:5px;bottom:-100px;font-size:280px;font-weight:1000;color:#ffffff06;line-height:1}.about-card h3{font-size:24px;margin:0 0 10px}.about-card p{color:var(--muted);margin:0}.about-copy h2{font-size:clamp(32px,4vw,46px);line-height:1.1;letter-spacing:-1.5px;margin:12px 0 18px}.about-copy>p{color:var(--muted)}.pillars{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:25px}.pillar{padding:15px;border-radius:16px;background:#111b2b;border:1px solid var(--line)}.pillar b{display:block;font-size:14px}.pillar span{color:var(--muted);font-size:12px}
+.values{background:#0c1321}.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.value{padding:25px;border:1px solid var(--line);border-radius:19px;background:#111b2b}.value-icon{width:43px;height:43px;border-radius:13px;background:#286bff22;color:#72dfff;display:grid;place-items:center;font-size:21px;margin-bottom:16px}.value h3{margin:0 0 6px}.value p{margin:0;color:var(--muted);font-size:14px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{padding:23px;border-radius:18px;background:linear-gradient(145deg,#15243b,#0d1524);border:1px solid var(--line)}.step .num{color:var(--cyan);font-size:12px;font-weight:900;letter-spacing:2px}.step h3{margin:8px 0}.step p{margin:0;color:var(--muted);font-size:14px}
+.faq{background:#0c1321}.faq-list{max-width:800px;margin:auto}.faq-item{border-bottom:1px solid var(--line)}.faq-q{width:100%;text-align:left;background:none;border:0;color:white;padding:21px 4px;display:flex;justify-content:space-between;gap:20px;font-weight:800;cursor:pointer}.faq-q span:last-child{color:var(--cyan);font-size:20px}.faq-a{display:none;color:var(--muted);padding:0 35px 20px 4px;font-size:14px}.faq-item.open .faq-a{display:block}.faq-item.open .faq-q span:last-child{transform:rotate(45deg)}
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:35px}.contact-info{padding:30px;border-radius:22px;background:linear-gradient(145deg,#17396a,#101b30);border:1px solid #64baff33}.contact-info h2{font-size:34px;line-height:1.1;margin:12px 0}.contact-info p{color:#c0d0e8}.contact-line{padding:12px 0;border-top:1px solid #ffffff20;color:#e0edff;font-size:14px}.contact-form{padding:30px;border-radius:22px;border:1px solid var(--line);background:#101827}.field{margin-bottom:15px}.field label{display:block;font-size:12px;font-weight:800;color:#cbd7e9;margin-bottom:7px}.field input,.field textarea{width:100%;border:1px solid #ffffff20;border-radius:12px;background:#0a111e;color:white;padding:13px 14px;outline:none}.field input:focus,.field textarea:focus{border-color:var(--cyan)}.field textarea{min-height:110px;resize:vertical}.form-note{color:var(--muted);font-size:11px;margin-top:12px}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}.socials{display:flex;gap:15px}.socials a:hover{color:var(--cyan)}
+.modal{position:fixed;inset:0;background:#03060bd9;z-index:50;display:none;place-items:center;padding:20px}.modal.show{display:grid}.modal-box{width:min(480px,100%);background:#121e31;border:1px solid #65cfff55;border-radius:23px;padding:28px;position:relative;box-shadow:0 25px 80px #0009}.close{position:absolute;right:17px;top:13px;background:none;border:0;color:white;font-size:25px;cursor:pointer}.modal-box h3{font-size:25px;margin:0 0 10px}.modal-box p{color:var(--muted)}.modal-box ul{color:#dce8fa;padding-left:20px}.mascot-helper{position:fixed;right:22px;bottom:22px;z-index:30;display:flex;align-items:flex-end;gap:10px}.mascot-helper button{border:2px solid #55d7ef;background:linear-gradient(145deg,#152842,#07101d);border-radius:50%;width:78px;height:78px;padding:3px;cursor:pointer;box-shadow:0 10px 35px #0008;transition:.2s}.mascot-helper button:hover{transform:translateY(-4px)}.mascot-helper img{width:100%;height:100%;object-fit:contain}.mascot-bubble{display:none;max-width:230px;background:#f3f8ff;color:#101a2b;padding:13px 15px;border-radius:16px 16px 4px 16px;font-size:12px;font-weight:750;box-shadow:0 12px 35px #0007}.mascot-helper.active .mascot-bubble{display:block}.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);opacity:0;background:#172b43;border:1px solid #49d4e7;color:white;padding:12px 18px;border-radius:12px;z-index:80;transition:.3s;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:850px){.links{display:none;position:absolute;top:76px;left:0;right:0;padding:20px 5%;background:#0b1220;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.links.show{display:flex}.menu{display:block}.nav-cta{display:none}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.hero{padding:70px 0}.hero-art{min-height:300px}.orbit{width:270px;height:270px}.products,.value-grid,.steps{grid-template-columns:1fr 1fr}.about-grid{gap:28px}}
+@media(max-width:560px){.mascot-helper{right:12px;bottom:12px}.mascot-helper button{width:64px;height:64px}.mascot-bubble{max-width:185px}section{padding:65px 0}.products,.value-grid,.steps{grid-template-columns:1fr}.hero h1{letter-spacing:-2px}.hero-art{min-height:270px}.orbit{width:230px;height:230px}.floating{font-size:10px}.pillars{grid-template-columns:1fr 1fr}.contact-info,.contact-form{padding:23px}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap nav">
+    <a class="brand" href="#inicio"><span class="logo">S</span><span>SONIQ<small>PERÚ S.A.C.</small></span></a>
+    <nav class="links" id="navLinks">
+      <a href="#inicio">Inicio</a><a href="#catalogo">Catálogo</a><a href="#nosotros">Nosotros</a><a href="#ventajas">Ventajas</a><a href="#faq">Preguntas</a><a href="#contacto">Contacto</a>
+    </nav>
+    <a class="nav-cta" href="#catalogo">Explorar catálogo ↗</a>
+    <button class="menu" id="menuBtn" aria-label="Abrir menú">☰</button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Tecnología que va contigo</div>
+      <h1>Conecta con<br><span>tu música.</span></h1>
+      <p>Descubre una forma práctica de disfrutar tus canciones, estudiar y mantenerte conectado. En SONIQ Perú te ayudamos a encontrar los auriculares ideales para tu día a día.</p>
+      <div class="hero-actions"><a class="btn" href="#catalogo">Descubrir productos <span>→</span></a><a class="btn-outline" href="#nosotros">Conoce SONIQ</a></div>
+    </div>
+    <div class="hero-art" aria-label="Ilustración de auriculares inalámbricos">
+      <div class="orbit"><img class="hero-mascot" src="assets/mascota-soniq.png" alt="Mascota panda de SONIQ Perú con auriculares"></div>
+      <div class="floating float1">♫ Sonido para tu mundo</div><div class="floating float2">¡Tu compañero SONIQ!</div>
+    </div>
+  </div>
+</section>
+
+<section class="catalog" id="catalogo">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow">Encuentra tu estilo</div><h2>Catálogo de productos</h2><p>Conoce nuestras líneas de auriculares inalámbricos. Selecciona un modelo para descubrir más detalles.</p></div>
+    <div class="products">
+      <article class="product">
+        <div class="product-visual product-photo"><img src="assets/modelo-basico.png" alt="Imagen referencial del modelo básico de SONIQ"></div>
+        <div class="product-body"><h3>Modelo Básico</h3><p>Una opción práctica para acompañarte en tus actividades cotidianas.</p><div class="features"><span class="chip">Uso diario</span><span class="chip">Clases</span><span class="chip">Llamadas</span></div><button data-product="basic">Ver características →</button></div>
+      </article>
+      <article class="product">
+        <div class="product-visual product-photo"><img src="assets/modelo-estandar.png" alt="Imagen referencial del modelo estándar de SONIQ"></div>
+        <div class="product-body"><h3>Modelo Estándar</h3><p>Diseñado para quienes buscan mayor autonomía y practicidad.</p><div class="features"><span class="chip">Mayor autonomía</span><span class="chip">Estuche de carga</span></div><button data-product="standard">Ver características →</button></div>
+      </article>
+      <article class="product">
+        <div class="product-visual product-photo"><img src="assets/modelo-premium.png" alt="Imagen referencial del modelo premium de SONIQ"></div>
+        <div class="product-body"><h3>Modelo Premium</h3><p>Una alternativa con funciones adicionales según la disponibilidad del proveedor.</p><div class="features"><span class="chip">Funciones extra</span><span class="chip">Estilo moderno</span></div><button data-product="premium">Ver características →</button></div>
+      </article>
+    </div>
+    <p style="text-align:center;color:var(--muted);font-size:11px;margin-top:24px">Las imágenes son ilustrativas. Las características específicas pueden variar según el modelo y proveedor.</p>
+  </div>
+</section>
+
+<section id="nosotros">
+  <div class="wrap about-grid">
+    <div class="about-card"><div class="eyebrow">Nuestra esencia</div><h3>La música te acompaña.<br>Nosotros también.</h3><p>Somos SONIQ Perú S.A.C., un emprendimiento enfocado en la comercialización de auriculares inalámbricos. Queremos hacer más sencilla la elección de tecnología de audio, con orientación cercana y productos funcionales.</p></div>
+    <div class="about-copy"><div class="eyebrow">Quiénes somos</div><h2>Tecnología accesible, atención cercana.</h2><p>Creemos que elegir tus próximos auriculares debe ser una experiencia simple y clara. Por eso buscamos ofrecer alternativas para diferentes necesidades, explicando sus características para que cada persona pueda elegir con confianza.</p>
+      <div class="pillars"><div class="pillar"><b>Misión</b><span>Acercar tecnología de audio con productos prácticos y atención confiable.</span></div><div class="pillar"><b>Visión</b><span>Ser una marca reconocida localmente por su servicio y variedad.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="values" id="ventajas">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow">Nuestro compromiso</div><h2>¿Por qué elegir SONIQ?</h2><p>Queremos que tu experiencia sea buena desde la primera consulta hasta después de tu compra.</p></div>
+    <div class="value-grid">
+      <article class="value"><div class="value-icon">✦</div><h3>Selección cuidadosa</h3><p>Priorizamos la calidad comprobable, la compatibilidad y la disponibilidad de cada producto.</p></article>
+      <article class="value"><div class="value-icon">♡</div><h3>Atención cercana</h3><p>Te orientamos para que conozcas las características y elijas según lo que necesitas.</p></article>
+      <article class="value"><div class="value-icon">✓</div><h3>Transparencia</h3><p>Buscamos comunicar con claridad la información del producto y las condiciones de atención.</p></article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow">Compra sencilla</div><h2>Así te acompañamos</h2><p>Una experiencia directa y clara para encontrar el modelo que buscas.</p></div>
+    <div class="steps">
+      <article class="step"><div class="num">01 / EXPLORA</div><h3>Descubre modelos</h3><p>Revisa nuestro catálogo y compara las características disponibles.</p></article>
+      <article class="step"><div class="num">02 / CONSULTA</div><h3>Resuelve tus dudas</h3><p>Escríbenos para recibir orientación sobre compatibilidad y disponibilidad.</p></article>
+      <article class="step"><div class="num">03 / COORDINA</div><h3>Coordina tu compra</h3><p>Confirma los detalles del producto y coordina la entrega con nuestro equipo.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow">Estamos para ayudarte</div><h2>Preguntas frecuentes</h2><p>Información útil antes de elegir tus auriculares.</p></div>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q"><span>¿Qué tipos de auriculares ofrecen?</span><span>+</span></button><div class="faq-a">Nuestro catálogo inicial contempla modelos básico, estándar y premium accesible. La disponibilidad y las funciones concretas se confirman al consultar.</div></div>
+      <div class="faq-item"><button class="faq-q"><span>¿Cómo sé si son compatibles con mi dispositivo?</span><span>+</span></button><div class="faq-a">Escríbenos indicando la marca y el modelo de tu dispositivo. Te ayudaremos a revisar la información de compatibilidad del producto.</div></div>
+      <div class="faq-item"><button class="faq-q"><span>¿Los productos cuentan con garantía?</span><span>+</span></button><div class="faq-a">Las condiciones de garantía y atención por fallas se informan para cada producto antes de confirmar la compra.</div></div>
+      <div class="faq-item"><button class="faq-q"><span>¿Cómo puedo consultar la disponibilidad?</span><span>+</span></button><div class="faq-a">Puedes utilizar el formulario de contacto o escribirnos directamente por WhatsApp. Nuestro equipo podrá orientarte.</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow">Hablemos</div><h2>¿Listo para conectar?</h2><p>Cuéntanos qué estás buscando y te ayudaremos a encontrar una opción.</p></div>
+    <div class="contact-grid">
+      <div class="contact-info"><div class="eyebrow">SONIQ PERÚ S.A.C.</div><h2>Tu próxima canción empieza aquí.</h2><p>Estamos para ayudarte con información sobre nuestros modelos y su disponibilidad.</p><div class="contact-line">📍 Ica, Perú</div><div class="contact-line">✉️ Atención mediante formulario o WhatsApp</div><div class="contact-line">♫ Síguenos en nuestras redes sociales</div></div>
+      <form class="contact-form" id="contactForm">
+        <div class="field"><label for="name">NOMBRE</label><input id="name" name="name" placeholder="¿Cómo te llamas?" required></div>
+        <div class="field"><label for="email">CORREO ELECTRÓNICO</label><input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" required></div>
+        <div class="field"><label for="message">¿EN QUÉ PODEMOS AYUDARTE?</label><textarea id="message" name="message" placeholder="Me gustaría conocer más sobre..." required></textarea></div>
+        <button class="btn" type="submit">Preparar mensaje ↗</button>
+        <p class="form-note">Este formulario prepara un mensaje en tu aplicación de correo. Configura el correo empresarial antes de publicar la web.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap footer-inner"><a class="brand" href="#inicio"><span class="logo">S</span><span>SONIQ<small>PERÚ S.A.C.</small></span></a><span>© 2026 SONIQ Perú S.A.C. · Conecta con tu música.</span><div class="socials"><a href="#contacto">Contacto</a><a href="#catalogo">Catálogo</a><a href="#nosotros">Nosotros</a></div></div></footer>
+
+<div class="modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-box"><button class="close" id="closeModal" aria-label="Cerrar">×</button><div class="eyebrow">Detalles del producto</div><h3 id="modalTitle"></h3><p id="modalDesc"></p><ul id="modalFeatures"></ul><p style="font-size:12px">Consulta la disponibilidad y las especificaciones exactas con nuestro equipo.</p><a class="btn" href="#contacto" id="modalContact">Consultar producto ↗</a></div></div>
+<div class="mascot-helper" id="mascotHelper"><div class="mascot-bubble">¡Hola! Soy la mascota de SONIQ 🐼 ¿Te ayudo a descubrir tus próximos auriculares?</div><button type="button" id="mascotBtn" aria-label="Hablar con la mascota SONIQ"><img src="assets/mascota-soniq.png" alt="Mascota panda SONIQ"></button></div>
+<div class="toast" id="toast">Mensaje preparado.</div>
+<script>
+const productInfo={
+ basic:{title:"Modelo Básico",desc:"Una alternativa funcional para acompañarte en tus actividades cotidianas.",features:["Pensado para uso diario, clases y llamadas","Diseño inalámbrico","Consulta compatibilidad y disponibilidad"]},
+ standard:{title:"Modelo Estándar",desc:"Una opción para quienes buscan mayor autonomía y practicidad.",features:["Mayor autonomía según el modelo","Estuche de carga","Consulta las especificaciones disponibles"]},
+ premium:{title:"Modelo Premium accesible",desc:"Una alternativa con funciones adicionales, de acuerdo con el producto disponible.",features:["Funciones adicionales según proveedor","Consulta características exactas","Disponibilidad sujeta a confirmación"]}
+};
+const modal=document.getElementById('productModal');
+document.querySelectorAll('[data-product]').forEach(btn=>btn.addEventListener('click',()=>{
+ const p=productInfo[btn.dataset.product];document.getElementById('modalTitle').textContent=p.title;document.getElementById('modalDesc').textContent=p.desc;
+ const ul=document.getElementById('modalFeatures');ul.innerHTML='';p.features.forEach(f=>{const li=document.createElement('li');li.textContent=f;ul.appendChild(li)});modal.classList.add('show');
+}));
+function closeModal(){modal.classList.remove('show')}
+document.getElementById('closeModal').addEventListener('click',closeModal);
+modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
+document.getElementById('modalContact').addEventListener('click',closeModal);
+document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>q.parentElement.classList.toggle('open')));
+document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('show'));
+document.getElementById('mascotBtn').addEventListener('click',()=>document.getElementById('mascotHelper').classList.toggle('active'));
+document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('show')));
+document.getElementById('contactForm').addEventListener('submit',e=>{
+ e.preventDefault();const name=document.getElementById('name').value.trim(),email=document.getElementById('email').value.trim(),message=document.getElementById('message').value.trim();
+ const subject=encodeURIComponent('Consulta desde la web de SONIQ Perú');const body=encodeURIComponent(`Hola SONIQ Perú,\n\nMi nombre es ${name}.\nMi correo es ${email}.\n\n${message}\n\nSaludos.`);
+ // Reemplaza este correo de ejemplo por el correo oficial de la empresa.
+ window.location.href=`mailto:contacto@soniqperu.com?subject=${subject}&body=${body}`;
+});
+</script>
+</body>
+</html>
